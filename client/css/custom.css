@@ -1,0 +1,40 @@
+p {
+  font-size: 20px;
+}
+
+.green::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #59ff8d;
+}
+
+.green::selection {
+  color: black;
+  background: #59ff8d;
+}
+.red::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #ff4c85;
+}
+
+.red::selection {
+  color: black;
+  background: #ff4c85;
+}
+.blue::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #4ca5ff;
+}
+
+.blue::selection {
+  color: black;
+  background: #4ca5ff;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
