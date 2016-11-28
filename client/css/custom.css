@@ -1,33 +1,37 @@
 p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
-.green::-moz-selection { /* Code for Firefox */
-  color: black;
-  background: #59ff8d;
+.20 {
+  font-size: 200px;
 }
 
-.green::selection {
+.aqua::-moz-selection { /* Code for Firefox */
   color: black;
-  background: #59ff8d;
-}
-.red::-moz-selection { /* Code for Firefox */
-  color: black;
-  background: #ff4c85;
+  background: #0eedde;
 }
 
-.red::selection {
+.aqua::selection {
   color: black;
-  background: #ff4c85;
+  background: #0eedde;
 }
-.blue::-moz-selection { /* Code for Firefox */
+.pink::-moz-selection { /* Code for Firefox */
   color: black;
-  background: #4ca5ff;
+  background: #eda3f7;
 }
 
-.blue::selection {
+.pink::selection {
   color: black;
-  background: #4ca5ff;
+  background: #eda3f7;
+}
+.purple::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #b08cf2;
+}
+
+.purple::selection {
+  color: black;
+  background: #b08cf2;
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -37,4 +41,54 @@ p {
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
+}
+
+ul {
+  list-style-type: none;
+}
+
+.chat-window ul {
+  position: absolute;
+  bottom: 0;
+  overflow:hidden-lg-up;
+}
+
+span.username {
+  color: #9564ef;
+  font-weight: bold;
+}
+
+.chat-window {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.user-window {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.btn-primary {
+  background-color: #b08cf2;
+  border-color: inherit;
+}
+
+.btn-primary:hover {
+  background-color: #9564ef;
+  border-color: inherit;
+}
+
+.btn-primary:focus {
+  background-color: #9564ef;
+  border-color: inherit;
+}
+
+.btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus,
+.btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus {
+  background-color: #7c52c9;
+  border-color: inherit;
+}
+
+.form-control:focus {
+  border-color: #b08cf2;
 }
