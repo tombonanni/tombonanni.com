@@ -5,7 +5,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 var path = require('path');
-var port = 3001;
+var port = process.env.PORT || 3001;
 
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
@@ -35,7 +35,7 @@ io.on('connection', function(socket){
 	});
 
 	socket.on('add-user', function(data){
-		if (users.indexOf(data.username) == -1){
+		if (users.indexOf(data.username) == -1) {
 			io.emit('add-user', {
 				username: data.username
 			});
