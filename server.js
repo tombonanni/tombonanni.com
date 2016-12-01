@@ -35,12 +35,17 @@ io.on('connection', function(socket){
 	});
 
 	socket.on('add-user', function(data){
-		if (users.indexOf(data.username) == -1) {
-			io.emit('add-user', {
-				username: data.username
+		username = data.username.trim();
+		if (username == '') {
+			socket.emit('prompt-username', {
+				message: 'Name Cannot Be Blank'
 			});
-			username = data.username;
-			users.push(data.username);
+		} else if (users.indexOf(username) == -1) {
+			io.emit('add-user', {
+				username: username
+			});
+			//username = data.username;
+			users.push(username);
 		} else {
 			socket.emit('prompt-username', {
 				message: 'User Already Exists'
