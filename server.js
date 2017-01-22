@@ -44,7 +44,6 @@ io.on('connection', function(socket){
 			io.emit('add-user', {
 				username: username
 			});
-			//username = data.username;
 			users.push(username);
 		} else {
 			socket.emit('prompt-username', {

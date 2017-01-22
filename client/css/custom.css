@@ -2,10 +2,6 @@ p {
   font-size: 16px;
 }
 
-.20 {
-  font-size: 200px;
-}
-
 .aqua::-moz-selection { /* Code for Firefox */
   color: black;
   background: #0eedde;
