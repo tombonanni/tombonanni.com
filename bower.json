@@ -10,7 +10,8 @@
   "dependencies": {
     "angular": "^1.5.8",
     "bootstrap": "v4.0.0-alpha.4",
-    "angular-route": "^1.5.8"
+    "angular-route": "^1.5.8",
+    "milligram": "^1.2.2"
   },
   "install": {
     "path": "client/libs"
