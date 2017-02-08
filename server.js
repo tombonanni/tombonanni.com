@@ -12,6 +12,9 @@ var methodOverride = require('method-override');
 
 var mongoose = require('mongoose');
 
+var favicon = require('serve-favicon');
+app.use(favicon(__dirname + '/client/img/favicon.ico'));
+
 app.use(bodyParser.json());
 app.use(methodOverride());
 
