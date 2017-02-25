@@ -6,3 +6,9 @@ body {
 .navbar {
   margin-bottom: 20px;
 }
+
+@media (max-width: 543px) {
+  .navbar-brand {
+    float: none;
+  }
+}

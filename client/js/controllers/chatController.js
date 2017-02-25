@@ -7,8 +7,10 @@ myApp.controller('chatController', ['$scope', 'Socket', function($scope, Socket)
     bootbox.prompt(message, function(name){
       if (name != null && name != '') {
         Socket.emit('add-user', {username: name});
+      } else if (name == null){
+        window.history.go(-1);
       } else {
-        promptUsername('You must enter a username!');
+        promptUsername('Name cannot be blank')
       }
     })
   }
@@ -18,6 +20,15 @@ myApp.controller('chatController', ['$scope', 'Socket', function($scope, Socket)
       Socket.emit('message', {message: msg});
     }
     $scope.msg = '';
+    console.log(document.getElementById("chat-window").scrollHeight + " | " + document.getElementById("chat-window").clientHeight);
+    var out = document.getElementById("chat-window");
+    var isScrolledToBottom = out.scrollHeight - out.clientHeight >= out.scrollTop + 1;
+    console.log(out.scrollHeight - out.clientHeight,  out.scrollTop + 1);
+    // scroll to bottom if isScrolledToBottom
+    console.log(isScrolledToBottom + " | " + out.scrollTop);
+    if(isScrolledToBottom){
+      out.scrollTop = out.scrollHeight - out.clientHeight;
+    }
   }
 
   promptUsername('What is your name?');
@@ -47,6 +58,7 @@ myApp.controller('chatController', ['$scope', 'Socket', function($scope, Socket)
   })
 
   $scope.$on('$locationChangeStart', function(event){
+    bootbox.hideAll();
     Socket.disconnect(true);
   })
 }])

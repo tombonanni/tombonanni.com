@@ -10,6 +10,7 @@ var myApp = angular.module('myApp', [
     $routeProvider.when('/projects', {templateUrl: 'partials/projects.html', controller: 'projectsController'});
     $routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: 'aboutController'});
     $routeProvider.when('/chat', {templateUrl: 'partials/chat.html', controller: 'chatController'});
+    $routeProvider.when('/sniper-bot', {templateUrl: 'partials/sniperbot.html', controller: 'sniperController'});
     $routeProvider.otherwise({redirectTo: '/home'});
 
     $locationProvider.html5Mode({enabled: true, requireBase: false});
