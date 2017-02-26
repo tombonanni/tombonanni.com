@@ -85,7 +85,7 @@ ul {
 }
 
 .chat-window ul {
-  position: absolute;
+  overflow-wrap: break-word;
 }
 
 span.username {

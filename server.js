@@ -33,8 +33,9 @@ io.on('connection', function(socket){
 		socket.emit('users', {users: users});
 	});
 
-	socket.on('message', function(data){
+	socket.on('message', function(data, fn){
 		io.emit('message', {username: username, message: data.message});
+		fn();
 	});
 
 	socket.on('add-user', function(data){
